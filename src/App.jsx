@@ -1,28 +1,13 @@
-import { useState } from 'react'
 import './App.css'
+import LeftSection from './sections/LeftSection/index';
+import RightSection from './sections/RightSection';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className='mt-14 mx-auto max-w-6xl grid grid-cols-[40%_60%]'>
-      <div className='sticky top-0 grid grid-rows-[35%_45%_20%]'>
-        <div>Title</div>
-        <div>Name</div>
-        <div>Caption</div>
-        <div>View Resume</div>
-        </div>
-        <div>Nav</div>
-        <div className='flex item-end'>Link</div>
-      <div>
-        <div className='mb-80'>About</div>
-        <div className='mb-80'>Experience</div>
-        <div className='mb-80'>Experience</div>
-        <div className='mb-80'>Experience</div>
-        <div className='mb-80'>Experience</div>
-        <div className='mb-80'>Experience</div>
-        <div className='mb-80'>Experience</div>
-      </div>
+
+    <div className='mt-14 mx-auto max-w-6xl grid gap-y-5 lg:grid-cols-[40%_60%]'>
+        <LeftSection />
+        <RightSection />
     </div>
   )
 }
